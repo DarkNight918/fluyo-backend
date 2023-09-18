@@ -9,9 +9,8 @@ exports.getQNA = async (req, res) => {
     }
 
     // find index % 5 of qna data because there are only 5 data
-    const adjustedIndex = index % 5;
 
-    const qnaData = await QNA.findOne().skip(adjustedIndex).limit(1);
+    const qnaData = await QNA.findOne().skip(index).limit(1);
 
     if (!qnaData) {
       return res.status(404).json({ message: "Data not found." });
