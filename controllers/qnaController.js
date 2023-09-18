@@ -3,7 +3,7 @@ const QNA = require("../models/qnas");
 exports.getQNA = async (req, res) => {
   try {
     const index = parseInt(req.query.index, 10); // get index from query
-    
+
     if (typeof index !== "number" || index < 0) {
       return res.status(400).json({ message: "Invalid index provided." });
     }

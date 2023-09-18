@@ -2,7 +2,6 @@ const express = require("express");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const cors = require("cors");
-const path = require("path");
 
 // Router
 const qnaRouter = require("./routes/qna");

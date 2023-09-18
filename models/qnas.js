@@ -22,6 +22,7 @@ const schema = new Schema({
       required: true,
     },
   },
+  selections: [{ type: String, required: true }],
 });
 
 module.exports = mongoose.model("qnas", schema);
